@@ -9,7 +9,7 @@ const app = express();//settting the app to express
 //middleware//
 /*Las funciones de middleware son funciones que tienen acceso al objeto
 de solicitud (req), y al objeto de respuesta (res)*/
-app.use(express.json()) //ver!
+//app.use(express.json()) //ver!
 app.use("/", (req, res, next) => {
   console.log(req.method);
   next();
@@ -19,7 +19,7 @@ app.use("/api/workouts",workoutsRoutes)
 //mongoose//
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
-  app.listen(process.env.PORT, () => {
+  app.listen(process.env.PORT, () => { //port 4000
     console.log("connected to db & listening on", process.env.PORT);
   }); 
 })
