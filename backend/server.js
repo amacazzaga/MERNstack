@@ -15,7 +15,7 @@ app.use("/", (req, res, next) => {
   next();
 });
 //route//
-app.use(workoutsRoutes)
+app.use("/api/workouts",workoutsRoutes)
 //mongoose//
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
