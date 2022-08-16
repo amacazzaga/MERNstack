@@ -9,7 +9,7 @@ const app = express();//settting the app to express
 //middleware//
 /*Las funciones de middleware son funciones que tienen acceso al objeto
 de solicitud (req), y al objeto de respuesta (res)*/
-//app.use(express.json()) //ver!
+app.use(express.json()) //ver!
 app.use("/", (req, res, next) => {
   console.log(req.method);
   next();

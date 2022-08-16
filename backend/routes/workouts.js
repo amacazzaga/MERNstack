@@ -15,5 +15,6 @@ router.post("/", createWorkout);
 router.get("/:id", getSingleWorkout);
 router.delete("/:id", deleteWorkout);
 router.patch("/:id", updateWorkout);
+//para cada entidad, tener las rutas///
 
 module.exports = router;
